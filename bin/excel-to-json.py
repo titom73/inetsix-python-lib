@@ -1,8 +1,12 @@
+#!/usr/bin/env python
+# coding: utf-8 -*-
 
+from __future__ import absolute_import, division, print_function
 from inetsix.serializer import ExcelSerializer
 import pprint
 import argparse
 import json
+import sys
 
 if __name__ == "__main__":
 
