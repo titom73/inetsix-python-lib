@@ -24,7 +24,7 @@ def download_http(remote_file, local_file=None):
     logger.info('Download initiated')
     url = remote_file
     file_name = url.split('/')[-1]
-    if local_file is not None:    
+    if local_file is not None:
         file_name = local_file
     http = urllib3.PoolManager()
     try:

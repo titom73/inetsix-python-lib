@@ -70,7 +70,7 @@ class ExcelSerializer:
             partFinal = dict()
             # Iterate over column to get all entries.
             # Use actve.max_column introduced in openpyxl >= 2.4
-            for i in range(0,active.max_column):
+            for i in range(0, active.max_column):
                 partFinal[res[0][i].value] = res[x][i].value
             final.append(partFinal)
         return final
