@@ -7,7 +7,7 @@ with open('requirements.txt') as f:
     REQUIRED_PACKAGES = f.read().splitlines()
 
 # Load description from README file
-with open("README.md", "r") as fh:
+with open("README.rst", "r") as fh:
     LONG_DESCRIPTION = fh.read()
 
 # Rename Scripts to sync with original name
