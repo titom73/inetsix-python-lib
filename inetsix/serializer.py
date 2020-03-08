@@ -19,8 +19,8 @@ class ExcelSerializer:
     >>>
     >>> json_result = serializer.serialize_book()
     >>> pp.pprint(json_result)
-        { 'Sheet1': 
-            [ 
+        { 'Sheet1':
+            [
               {'description': 'ifd1', 'interface': 'ethernet1', 'state': 'up'},
               { 'description': 'ifd2', 'interface': 'ethernet2', 'state': 'down'}
             ]
