@@ -3,17 +3,15 @@ on:
   push:
     tags:
       - 'v*'
-
 jobs:
   PyPi:
     runs-on: ubuntu-latest
     steps:
-    - name: Build package
-      run: |
-        python setup.py sdist bdist_wheel
-    - name: Publish package
-      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
-      uses: pypa/gh-action-pypi-publish@master
+    - uses: actions/checkout@master
+    - name: Publish Python Package
+      uses: mariamrf/py-package-publish-action@v1.0.0
       with:
-        user: __token__
-        password: ${{ secrets.PYPI_TOKEN }}
+        python_version: '3.7.0'
+      env:
+        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
