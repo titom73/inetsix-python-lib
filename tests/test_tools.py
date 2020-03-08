@@ -31,7 +31,7 @@ def test_download_http_valide(url=URL_OK,
 
     print('* Use case: DL file with rename')
     function_result = inetsix.tools.download_http(remote_file=url,
-                                                   local_file=local_filename)
+                                                  local_file=local_filename)
     assert function_result == FILENAME_DL,\
         'Filename returned is not correct: '+str(function_result)
     assert os.path.isfile(function_result) is True,\
