@@ -12,10 +12,7 @@ with open("README.md", "r") as fh:
     LONG_DESCRIPTION = fh.read()
 
 # Rename Scripts to sync with original name
-# shutil.copyfile('bin/cvp-container-manager.py', 'bin/cvp-container-manager')
-# shutil.copyfile('bin/cvp-configlet-manager.py', 'bin/cvp-configlet-manager')
-# shutil.copyfile('bin/cvp-task-manager.py', 'bin/cvp-task-manager')
-# shutil.copyfile('bin/cvp-configlet-backup.py', 'bin/cvp-configlet-backup')
+shutil.copyfile('bin/excel-to-json.py', 'bin/excel-to-json')
 
 # Script version
 VERSION = str(__version__)
@@ -24,17 +21,17 @@ AUTHOR_EMAIL = str(__email__)
 LICENSE = str(__license__)
 
 setup(
-    name="aeris-poller",
+    name="inetsix",
     version=VERSION,
-    # scripts=["bin/excel-to-json.py"],
+    scripts=["bin/excel-to-json.py"],
     packages=['inetsix'],
     python_requires=">=3.5",
     install_requires=REQUIRED_PACKAGES,
-    url="https://github.com/titom73/arista-cloudvision-telemetry-python",
+    url="https://github.com/titom73/inetsix-python-lib",
     license=LICENSE,
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
-    description="Tools to collect AERIS dataset",
+    description="Tools & Python function from inetsix.",
     long_description=LONG_DESCRIPTION,
     zip_safe=False,
     classifiers=[
