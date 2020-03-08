@@ -1,3 +1,5 @@
+![Python Validation](https://github.com/titom73/inetsix-python-lib/workflows/Python%20Validation/badge.svg?branch=master) ![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/titom73/inetsix-python-lib) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/titom73/inetsix-python-lib) ![PyPI](https://img.shields.io/pypi/v/inetsix) ![PyPI - License](https://img.shields.io/pypi/l/inetsix)
+
 # Inetsix Python toolbox
 
 ## Overview
