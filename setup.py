@@ -32,7 +32,7 @@ setup(
     author_email=AUTHOR_EMAIL,
     description="Tools & Python function from inetsix.",
     long_description=LONG_DESCRIPTION,
-    long_description_content_type='text/markdown'
+    long_description_content_type='text/markdown',
     zip_safe=False,
     classifiers=[
         "Development Status :: 4 - Beta",
