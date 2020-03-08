@@ -8,15 +8,12 @@ jobs:
   PyPi:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy package
-      uses: remorses/pypi@master
+    - name: Build package
+      run: |
+        python setup.py sdist bdist_wheel
+    - name: Publish package
+      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+      uses: pypa/gh-action-pypi-publish@master
       with:
-        setupfile: ./setup.py
-        username: ${{ secrets.PYPI_USERNAME }}
-        password: ${{ secrets.PYPI_PASSWORD }}
-    # - name: Publish package
-    #   if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
-    #   uses: pypa/gh-action-pypi-publish@master
-    #   with:
-    #     user: __token__
-    #     password: ${{ secrets.PYPI_TOKEN }}
+        user: __token__
+        password: ${{ secrets.PYPI_TOKEN }}
