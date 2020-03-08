@@ -7,7 +7,7 @@ with open('requirements.txt') as f:
     REQUIRED_PACKAGES = f.read().splitlines()
 
 # Load description from README file
-with open("README.rst", "r") as fh:
+with open("README.md", "r") as fh:
     LONG_DESCRIPTION = fh.read()
 
 # Rename Scripts to sync with original name
@@ -32,6 +32,7 @@ setup(
     author_email=AUTHOR_EMAIL,
     description="Tools & Python function from inetsix.",
     long_description=LONG_DESCRIPTION,
+    long_description_content_type='text/markdown'
     zip_safe=False,
     classifiers=[
         "Development Status :: 4 - Beta",
