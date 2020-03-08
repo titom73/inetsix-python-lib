@@ -77,4 +77,3 @@ def load_constant(key_name, default='UNSET'):
     else:
         logger.debug('%s is not set - using default (%s)', key_name, str(default))   # noqa E501
     return default
-

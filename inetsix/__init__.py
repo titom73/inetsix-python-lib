@@ -7,4 +7,3 @@ __email__ = 'thomas.grimonet@gmail.com'
 __copyright__ = "Copyright 2020 - Thomas Grimonet"
 __credits__ = ["Thomas Grimonet"]
 __license__ = "BSD"
-

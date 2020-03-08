@@ -1,5 +1,4 @@
 import logging
-from logging.handlers import RotatingFileHandler
 import os
 
 # Get Logging level from Environment variable / Default INFO

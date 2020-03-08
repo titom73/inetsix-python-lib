@@ -1,15 +1,9 @@
-import os
-import pprint
-import sys
-import json
 import logging
 import openpyxl
 from openpyxl.utils.exceptions import (
     InvalidFileException,
     SheetTitleException
 )
-import itertools
-import inetsix.logger
 
 
 class ExcelSerializer:
@@ -41,7 +35,7 @@ class ExcelSerializer:
         ----------
         excel_path : [type], optional
             Path to excel file you want to read data.
-        """        
+        """
         self._logger = logging.getLogger('inetsix.serializer.ExcelSerializer')
         self._logger.info('Excel serializer initiated')
         self._filename = excel_path
@@ -89,7 +83,7 @@ class ExcelSerializer:
         -------
         list
             list of sheets
-        """        
+        """
         self._logger.info('list all sheets in book %s', self._filename)
         self._logger.debug('sheets found: %s', str(self._book.sheetnames))
         return self._book.sheetnames
@@ -102,7 +96,7 @@ class ExcelSerializer:
         -------
         dict
             serialized content of all sheets.
-        """        
+        """
         self._logger.info('Serialize all sheets in book %s', self._filename)
         json_book = dict()
         for sheet_name in self.get_sheets_name:

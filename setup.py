@@ -1,4 +1,3 @@
-import os
 import shutil
 from setuptools import setup
 from inetsix import __version__, __author__, __license__, __email__
