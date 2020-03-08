@@ -67,10 +67,9 @@ class ExcelSerializer:
         res = list(active)
         final = list()
         for x in range(1, len(res)):
-            partFinal = {}
-            partFinal[res[0][0].value] = res[x][0].value
-            partFinal[res[0][1].value] = res[x][1].value
-            partFinal[res[0][2].value] = res[x][2].value
+            partFinal = dict()
+            for i in [0,1,2]:
+                partFinal[res[0][i].value] = res[x][i].value
             final.append(partFinal)
         return final
 
