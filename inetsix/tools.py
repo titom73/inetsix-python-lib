@@ -4,7 +4,7 @@ import os.path
 import logging
 
 
-def download_http(remote_file):
+def download_http(remote_file, local_file=None):
     """
     Function to download file over HTTP/HTTPS.
 
@@ -12,6 +12,8 @@ def download_http(remote_file):
     ----------
     remote_file : string
         URL to download file.
+    local_file : string, optional
+        Local Filename to save file, default is None
 
     Returns
     -------
@@ -22,6 +24,8 @@ def download_http(remote_file):
     logger.info('Download initiated')
     url = remote_file
     file_name = url.split('/')[-1]
+    if local_file is not None:    
+        file_name = local_file
     http = urllib3.PoolManager()
     try:
         r = http.request('GET', url, preload_content=False)
