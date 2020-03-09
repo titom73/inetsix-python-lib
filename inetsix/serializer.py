@@ -61,7 +61,7 @@ class ExcelSerializer:
         """
         self._logger.info('Serializing sheet %s', str(sheet))
         try:
-            active = self._book.get_sheet_by_name(sheet)
+            active = self._book[sheet]
         except SheetTitleException as exception_message:
             self._logger.error('Error: %s', str(exception_message))
         res = list(active)
