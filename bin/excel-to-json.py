@@ -23,8 +23,8 @@ $ excel-to-json.py -e /path/to/excel/book.xlsx
 }
 
 # Get content of a given sheet.
-$ excel-to-json.py -e /path/to/excel/book.xlsx -s Sheet1 
-[ 
+$ excel-to-json.py -e /path/to/excel/book.xlsx -s Sheet1
+[
     {'description': 'ifd1', 'interface': 'ethernet1', 'state': 'up'},
     {'description': 'ifd2', 'interface': 'ethernet2', 'state': 'down'}
 ]
