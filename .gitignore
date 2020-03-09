@@ -137,4 +137,8 @@ dmypy.json
 .vscode/*
 *.code-workspace
 
+# All xlsx used as test
 *.xlsx
+
+# Remaned file during setup
+bin/excel-to-json
