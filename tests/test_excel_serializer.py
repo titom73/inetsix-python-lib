@@ -45,7 +45,7 @@ def test_wrong_xlsx_to_json(get_xlsx_file='UNKNOWN'):
         Incorrect Filename, by default 'UNKNOWN'
     """
     with pytest.raises(openpyxl.utils.exceptions.InvalidFileException):
-        xlsx_json = ExcelSerializer(excel_path=get_xlsx_file).serialize_book()  #noqa F841
+        xlsx_json = ExcelSerializer(excel_path=get_xlsx_file).serialize_book()  # noqa: F841
 
 
 def test_complete_xlsx_to_json(get_xlsx_file):
