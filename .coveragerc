@@ -1,0 +1,10 @@
+[run]
+omit =
+    # omit anything in a .local directory anywhere
+    */.local/*
+    # omit anything in a .venv directory anywhere
+    */.venv/*
+    # omit anything in a standard lib directory anywhere
+    */site-packages/*
+    # omit everything in /usr
+    /usr/*
