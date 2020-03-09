@@ -5,6 +5,7 @@ import openpyxl
 
 
 XLSX_FILE = 'tests/Book1.xlsx'
+XLSX_UNKNOWN = 'UNKNOWN'
 
 
 @pytest.fixture
@@ -33,7 +34,7 @@ def get_xlsx_file(file=XLSX_FILE):
         return None
 
 
-def test_wrong_xlsx_to_json(get_xlsx_file='UNKNOWN'):
+def test_wrong_xlsx_to_json(get_xlsx_file=XLSX_UNKNOWN):
     """
     Test inetsix.serializer.ExcelSerializer is raising exception.
 
@@ -42,7 +43,7 @@ def test_wrong_xlsx_to_json(get_xlsx_file='UNKNOWN'):
     Parameters
     ----------
     get_xlsx_file : str, optional
-        Incorrect Filename, by default 'UNKNOWN'
+        Incorrect Filename, by default 'XLSX_UNKNOWN'
     """
     with pytest.raises(openpyxl.utils.exceptions.InvalidFileException):
         xlsx_json = ExcelSerializer(excel_path=get_xlsx_file).serialize_book()  # noqa: F841

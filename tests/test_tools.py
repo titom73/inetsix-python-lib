@@ -2,7 +2,7 @@ import inetsix.tools
 import os.path
 
 URL_OK = 'https://raw.githubusercontent.com/titom73/inetsix-python-lib/master/tests/Book1.xlsx'
-URL_404 = 'https://github.com/titom73/inetsix-python-lib/blob/master/tests/Book2.xlsx'
+URL_404 = 'https://raw.githubusercontent.com/titom73/inetsix-python-lib/master/tests/Book2.xlsx'
 FILENAME_DL = 'downloaded-file.xlsx'
 FILENAME_SRC = 'Book1.xlsx'
 
