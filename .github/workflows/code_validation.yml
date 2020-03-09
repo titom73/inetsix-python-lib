@@ -46,4 +46,4 @@ jobs:
         make dev-start
     - name: Run Pytest
       run: |
-        pytest tests/test_tools.py
+        pytest tests/
